@@ -6,7 +6,7 @@ fofatools 是一个用python 编写的FOFA批量查询脚本，利用强大的�
 
 本工具基于 FoFa 的 API 进行封装，使用时需要高级会员或者普通会员的 API key，使用注册用户的 API key 会提示账户需要充值F币。
 
-点击 https://github.com/cail0906/fofatools下载
+点击 https://github.com/cail0906/fofatools 下载
 
 - pip install pandas==1.5.3,requests==2.28.2
 - 将查询语句写入fofa_queries.txt
