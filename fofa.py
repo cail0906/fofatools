@@ -1,18 +1,19 @@
 import requests
 import csv
 import base64
+import datetime
 
 # FOFA API的基础URL
 BASE_URL = "https://fofa.info/api/v1/search/all"
 
 # FOFA email和key，需要替换成自己的
-FOFA_EMAIL = "please input your mail!"
-FOFA_KEY = "please input your apikey!"
+FOFA_EMAIL = "52725351@qq.com"
+FOFA_KEY = "0d98791ef653f285f5245914ea1499a8"
 
 # 从txt文件中读取FOFA语句
 def read_queries(file_path):
     queries = []
-    with open(file_path, "r") as f:
+    with open(file_path, "r", encoding="utf-8") as f:
         for line in f:
             queries.append(line.strip())
     return queries
@@ -35,8 +36,13 @@ def query_fofa_api(query):
 
 # 将结果写入CSV文件中
 def write_to_csv(results):
-    with open("fofa_results.csv", "a", newline="", encoding="utf-8") as f:
+    columns_li = ['host','ip','title','port','protocol']
+    now = datetime.datetime.now()
+    now_str = now.strftime("%Y%m%d")
+    filename = f"{now_str}_fofa_res.csv"
+    with open(f"{filename}", "a", encoding="utf_8", newline="") as f:
         writer = csv.writer(f)
+        writer.writerow(columns_li)
         for result in results:
             result_str = str(result)
             try:
