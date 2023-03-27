@@ -7,8 +7,8 @@ import datetime
 BASE_URL = "https://fofa.info/api/v1/search/all"
 
 # FOFA email和key，需要替换成自己的
-FOFA_EMAIL = "52725351@qq.com"
-FOFA_KEY = "0d98791ef653f285f5245914ea1499a8"
+FOFA_EMAIL = "please input your E-Mail！"
+FOFA_KEY = "please input your apikey！"
 
 # 从txt文件中读取FOFA语句
 def read_queries(file_path):
