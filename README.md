@@ -11,7 +11,7 @@ fofatools 是一个用python 编写的FOFA批量查询脚本，利用强大的�
 - pip install pandas==1.5.3,requests==2.28.2
 - 将查询语句写入fofa_queries.txt
 - python fofa.py
-- 查看fofa_results.csv
+- 查看新生成的csv文件
 
 
 
